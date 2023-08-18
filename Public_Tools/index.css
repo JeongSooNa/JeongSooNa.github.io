@@ -196,6 +196,7 @@ section.hero-card-section .row-card > .hero-card-container > .card:hover i {
 }
 .gnina-self-docking img{
   width: 400px;
+  margin: 20px;
   border-radius: 10px;border: 1px solid white;
 }
 .gnina-self-docking h5{
