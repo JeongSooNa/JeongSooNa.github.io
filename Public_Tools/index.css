@@ -10,12 +10,16 @@
   display: flex;
   flex-direction: column;
 }
-hr{
-    margin: 10px;
+hr {
+  margin: 10px;
 }
 
 body {
   font-family: "Lato", sans-serif;
+}
+.container{
+  background-color: black;
+  color: white;
 }
 
 /* card section */
@@ -93,11 +97,16 @@ section.hero-card-section .row-card > .hero-card-container > .card {
   position: relative;
   color: #fff;
   border: none;
-  cursor: pointer;
   border-radius: 15px;
   padding: 25px 15px;
   max-width: 320px;
   margin: auto;
+  z-index: 2;
+}
+
+.card-body a{
+  z-index: 3;
+  cursor: pointer;
 }
 
 section.hero-card-section .row-card > .hero-card-container > .card::after {
@@ -108,7 +117,7 @@ section.hero-card-section .row-card > .hero-card-container > .card::after {
   left: 1rem;
   top: 1rem;
   border-radius: 15px;
-  z-index: -1;
+  z-index: 1;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -168,28 +177,35 @@ section.hero-card-section
 
 section.hero-card-section .row-card > .hero-card-container > .card:hover {
   color: rgba(255, 255, 255, 1);
+  transform: scale(1.02);
+  transition: 0.2s;
 }
 
 section.hero-card-section .row-card > .hero-card-container > .card:hover i {
   padding-left: 10px;
 }
 
-
 /* section1 */
-.section1{
-    margin: 20px;
+.section1 {
+  margin: 20px;
 }
-
 
 /* section2 */
-.section2{
-    margin: 20px;
+.section2 {
+  margin: 20px;
+}
+.gnina-self-docking img{
+  width: 400px;
+  border-radius: 10px;border: 1px solid white;
+}
+.gnina-self-docking h5{
+  margin: 20px;
 }
 
-.bottom{
-    color: white;
-    width: 100%;
-    height: 100px;
-    margin-top: 50px;
-    background-color: black;
+.bottom {
+  color: white;
+  width: 100%;
+  height: 100px;
+  margin-top: 50px;
+  background-color: black;
 }
