@@ -46,7 +46,7 @@ body {
 
 .block-badge {
   padding: 3px 10px;
-  max-width: 6.1875rem;
+  max-width: 22.1875rem;
   border-radius: 12px;
   display: block;
   margin-top: 0;
@@ -200,6 +200,31 @@ section.hero-card-section .row-card > .hero-card-container > .card:hover i {
   border-radius: 10px;border: 1px solid white;
 }
 .gnina-self-docking h5{
+  margin: 20px;
+}
+.gnina-cross-docking img{
+  width: 400px;
+  margin: 20px;
+  border-radius: 10px;border: 1px solid white;
+}
+.gnina-cross-docking h5{
+  margin: 20px;
+}
+.gnina-final-docking img{
+  width: 400px;
+  margin: 20px;
+  border-radius: 10px;border: 1px solid white;
+}
+.gnina-final-docking h5{
+  margin: 20px;
+}
+
+.diffdock-issue img{
+  width: 400px;
+  margin: 20px;
+  border-radius: 10px;border: 1px solid white;
+}
+.diffdock-issue h5{
   margin: 20px;
 }
 
