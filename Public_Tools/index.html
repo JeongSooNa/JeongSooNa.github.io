@@ -20,9 +20,9 @@
             <h3>JeongSoo Na</h3>
             <br />
             <h4>Syntekabio</h4>
-            <br>
+            <br />
             <h4>Insilico ~~</h4>
-            <br>
+            <br />
             <h4>ADSP AI Drug Development Operation Team</h4>
             <br />
             <h4>Update At : 2023.08.18</h4>
@@ -52,7 +52,7 @@
                   <a
                     href="https://github.com/JeongSooNa/AlphaFold2"
                     class="btn btn-link btn-card stretched-link"
-                    >Github <i class="fas fa-chevron-right"></i
+                    >Go to Github <i class="fas fa-chevron-right"></i
                   ></a>
                 </div>
               </div>
@@ -71,7 +71,7 @@
                   <a
                     href="https://github.com/facebookresearch/esm"
                     class="btn btn-link btn-card stretched-link"
-                    >Github <i class="fas fa-chevron-right"></i
+                    >Go to Github <i class="fas fa-chevron-right"></i
                   ></a>
                 </div>
               </div>
@@ -91,7 +91,7 @@
                   <a
                     href="https://github.com/kakaobrain/solvent"
                     class="btn btn-link btn-card stretched-link"
-                    >Github <i class="fas fa-chevron-right"></i
+                    >Go to Github <i class="fas fa-chevron-right"></i
                   ></a>
                 </div>
               </div>
@@ -137,7 +137,7 @@
                   <a
                     href="https://github.com/JeongSooNa/Gnina"
                     class="btn btn-link btn-card stretched-link"
-                    >Github <i class="fas fa-chevron-right"></i
+                    >Go to Github <i class="fas fa-chevron-right"></i
                   ></a>
                 </div>
               </div>
@@ -159,7 +159,7 @@
                   <a
                     href="https://github.com/gcorso/DiffDock"
                     class="btn btn-link btn-card stretched-link"
-                    >Github <i class="fas fa-chevron-right"></i
+                    >Go to Github <i class="fas fa-chevron-right"></i
                   ></a>
                 </div>
               </div>
@@ -180,7 +180,7 @@
                   <a
                     href="https://github.com/ccsb-scripps/AutoDock-Vina"
                     class="btn btn-link btn-card stretched-link"
-                    >Github <i class="fas fa-chevron-right"></i
+                    >Go to Github <i class="fas fa-chevron-right"></i
                   ></a>
                 </div>
               </div>
@@ -257,13 +257,16 @@
                   <br />
                   Output data will be statistically processed later
                 </h5>
-                <img src="IMG/gnina_pymol.png" alt="" />
+                <img src="IMG/gnina_pymol_cross.png" alt="" />
               </div>
               <br />
               <h4>Target Compound Docking</h4>
               <div class="row gnina-final-docking">
                 <img src="IMG/gnina_pymol_result.png" alt="" />
                 <h5>
+                  <br />
+                  <br />
+                  Do structures superimposition
                   <br />
                   <br />
                   Get best pose in output data
@@ -273,6 +276,10 @@
               </div>
               <br />
               <h4>Result</h4>
+              <br />
+              <h5>Compare with experimental data</h5>
+              <br />
+              <h5>Validate similarity with real model</h5>
             </div>
           </div>
           <br />
@@ -322,11 +329,52 @@
               <br />
             </div>
           </div>
+          <div class="section3">
+            <hr />
+            <br />
+            <h3>Protein Ligand Interaction Profiling</h3>
+            <span class="block-badge"></span>
+            <br />
+            <h4>PLIP Public Tool</h4>
+            <div class="row plip-intro">
+              <img
+                src="https://plip-tool.biotec.tu-dresden.de/plip-web/assets/pliplogo-057aa84e8a403dc509ba9178c400c62e.svg"
+                alt=""
+              />
+              <h5>
+                Protein-Ligand Interaction Profiling
+                <br>
+                <br>
+                Easy and fast identification of non-covalent interactions
+                between biological macromolecules and their ligands.
+                <br>
+                <br>
+                Web Service : <a href="https://plip-tool.biotec.tu-dresden.de/plip-web/plip/index">PLIP Service</a>
+              </h5>
+            </div>
+            <br>
+            <br>
+            <h4>Local Server setting</h4>
+            <br>
+            <h5>Set Environment (Docker)</h5>
+            <code>docker pull pharmai/plip</code>
+            <br>
+            <br>
+            <h5>Run PLIP (shell command)</h5>
+            <code>docker run --rm -v ${PWD}:/results -w /r0esults -u $(id -u ${USER}):$(id -g ${USER}) pharmai/plip:latest -f input.pdb -yv -o output_dir_path -x -t -y -p</code>
+            <br>
+            <br>
+            <h5>The Options can check in <a href="https://github.com/JeongSooNa/PLIP">Github</a></h5>
+            <br>
+            <h5>Reference : <a href="https://github.com/pharmai/plip">PLIP Github</a></h5>
+          </div>
         </div>
       </section>
       <hr />
-      <div class="bottom">
-        <h4>This is bottom section</h4>
+      <div class="row bottom">
+        <div class="col bottom-1">
+          <h4>E-mail : <span>jsna@syntekabio.com</span></h4>
+        </div>
       </div>
     </div>
   </body>

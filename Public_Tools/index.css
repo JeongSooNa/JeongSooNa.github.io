@@ -228,6 +228,29 @@ section.hero-card-section .row-card > .hero-card-container > .card:hover i {
   margin: 20px;
 }
 
+/* section 3 */
+.section3 {
+  margin: 20px;
+}
+.plip-intro img{
+  width: 100px;
+}
+.plip-intro h5{
+  margin: 20px;
+}
+.section3 a{
+  text-decoration: none;
+  color: skyblue;
+}
+.section3 code{
+  margin-left: 20px;
+  background-color: grey;
+  border-radius: 3px;
+  padding: 3px 10px;
+}
+
+
+
 .bottom {
   color: white;
   width: 100%;
