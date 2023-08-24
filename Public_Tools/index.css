@@ -20,6 +20,25 @@ body {
 .container{
   background-color: black;
   color: white;
+  position: relative;
+}
+/* fixed navigator */
+.nav-wrapper{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(135, 207, 235, 0.5);
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  text-align: center;
+  line-height: 70px;
+  z-index: 3;
+  cursor: pointer;
+}
+.nav-wrapper:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
 /* card section */
@@ -34,6 +53,13 @@ body {
 .hero-card-section .card-main-heading-section {
   margin-bottom: 3rem;
   margin-left: 1rem;
+}
+.hero-card-section .card-main-heading-section ol{
+  margin: 20px;
+  line-height: 30px;
+}
+.hero-card-section .card-main-heading-section li{
+  font-weight: 600;
 }
 .hero-card-section .card-main-heading-section h1 {
   text-align: center;
@@ -189,6 +215,23 @@ section.hero-card-section .row-card > .hero-card-container > .card:hover i {
 .section1 {
   margin: 20px;
 }
+.section1-1 ol{
+  margin: 20px;
+}
+.section1-1 li{
+  line-height: 25px;
+  font-weight: 600;
+}
+.section1-1 h4{
+  margin: 20px auto;
+}
+.section1-1 h5{
+  line-height: 30px;
+}
+.section1-1 img{
+  width: 70%;
+  margin-left: 15%;
+}
 
 /* section2 */
 .section2 {
@@ -254,7 +297,17 @@ section.hero-card-section .row-card > .hero-card-container > .card:hover i {
 .bottom {
   color: white;
   width: 100%;
-  height: 100px;
-  margin-top: 50px;
+  height: 150px;
+  margin-top: 10px;
   background-color: black;
+}
+
+.bottom-1{
+  height: 100%;
+  margin-left: 20px;
+  justify-content: space-around;
+}
+.bottom-1 a{
+  text-decoration: none;
+  color: skyblue;
 }

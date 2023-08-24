@@ -10,6 +10,9 @@
     <div class="container">
       <section class="hero-card-section">
         <div class="container my-5">
+          <div class="nav-wrapper">
+            <h4>Nav</h4>
+          </div>
           <div class="card-main-heading-section">
             <img src="IMG/STB_logo.png" alt="" />
             <h1 class="card-main-heading">
@@ -25,9 +28,21 @@
             <br />
             <h4>ADSP AI Drug Development Operation Team</h4>
             <br />
-            <h4>Update At : 2023.08.18</h4>
+            <h4>Update At : 2023.08.24</h4>
             <br />
             <br />
+            <br />
+            <br />
+            <h3>Contents</h3>
+            <ol type="I">
+              <li>Protein Structure Prediction</li>
+              <h5>- AlphaFold2</h5>
+              <li>Protein Ligand Molecular Docking</li>
+              <h5>- Target Protein Docking using Gnina</h5>
+              <h5>- Target Protein Docking using DiffDock</h5>
+              <li>Protein Ligand Interaction Profiling</li>
+              <li>Contect</li>
+            </ol>
             <br />
             <br />
             <hr />
@@ -101,10 +116,89 @@
           <br />
           <br />
           <div class="section1">
-            <h3>Example</h3>
+            <h3>AlphaFold2 - Deepmind</h3>
             <span class="block-badge"></span>
             <div class="section1-1">
-              <!-- contents -->
+              <h3>Process</h3>
+              <ol>
+                <li>Input protein sequence</li>
+                <li>Install dependencies</li>
+                <li>
+                  MSA options (custom MSA upload, single sequence, pairing mode)
+                </li>
+                <li>Advanced settings</li>
+                <li>Run Prediction</li>
+                <li>Display 3D structure</li>
+                <li>Plots</li>
+                <li>Package and download results</li>
+              </ol>
+              <br />
+              <h4>Input protein sequence</h4>
+              <h5>
+                - protein sequence (in uniprot)
+                <br />
+                - jobname
+                <br />
+                - templete_mode : none
+              </h5>
+              <img src="IMG/AF_Input_protein_sequence.png" alt="">
+              <br />
+              <h4>Install dependencies</h4>
+              <img src="IMG/AF_Install dependencies.png" alt="">
+              <br />
+              <h4>
+                MSA options (custom MSA upload, single sequence, pairing mode)
+              </h4>
+              <h5>
+                - mmseqs2_uniref_env (Default)
+                <br />
+                - unpaired_paired (Default)
+              </h5>
+              <img src="IMG/AF_MSA_options.png" alt="">
+              <br />
+              <h4>Advanced settings</h4>
+              <h5>
+                - model_type : auto (Default)
+                <br />
+                - num_recycles : auto (Default)
+              </h5>
+              <img src="IMG/AF_Advances_setting.png" alt="">
+              <br />
+              <h4>Run Prediction</h4>
+              <h5>- 5 model output</h5>
+              <img src="IMG/AF_Run_Prediction.png" alt="">
+              <br />
+              <h4>Display 3D structure</h4>
+              <h5>
+                - check 3D structure (choose rank_num (1~5))
+                <br />
+                - show_sidechain
+                <br />
+                - color : lDDT, rainbow
+                <br />
+                - blue : Very high
+                <br />
+                - sky : Confident
+                <br />
+                - green : OK
+                <br />
+                - yellow : Low
+                <br />
+                - red : Very low
+              </h5>
+              <img src="IMG/AF_Display_3D_structure.png" alt="">
+              <br />
+              <h4>Plots</h4>
+              <h5>
+                - Sequence coverage
+                <br />
+                - Predicted lDDT per position
+              </h5>
+              <img src="IMG/AF_Plot.png" alt="">
+              <br />
+              <h4>Package and download results</h4>
+              <h5>- Result : protein sequence -> predicted 5 structure</h5>
+              <img src="IMG/AF_download.png" alt="">
             </div>
           </div>
           <!-- section 2 -->
@@ -280,7 +374,7 @@
               <h5>Compare with experimental data</h5>
               <br />
               <h5>Validate similarity with real model</h5>
-              <br>
+              <br />
               <h5>wow!</h5>
             </div>
           </div>
@@ -345,30 +439,55 @@
               />
               <h5>
                 Protein-Ligand Interaction Profiling
-                <br>
-                <br>
+                <br />
+                <br />
                 Easy and fast identification of non-covalent interactions
                 between biological macromolecules and their ligands.
-                <br>
-                <br>
-                Web Service : <a href="https://plip-tool.biotec.tu-dresden.de/plip-web/plip/index">PLIP Service</a>
+                <br />
+                <br />
+                Web Service :
+                <a
+                  href="https://plip-tool.biotec.tu-dresden.de/plip-web/plip/index"
+                  >PLIP Service</a
+                >
               </h5>
             </div>
-            <br>
-            <br>
+            <br />
+            <br />
             <h4>Local Server setting</h4>
+            <br />
             <h5>Set Environment (Docker)</h5>
+            <br />
             <code>docker pull pharmai/plip</code>
-            <br>
+            <br />
+            <br />
             <h5>Run PLIP (shell command)</h5>
-            <code>docker run --rm -v ${PWD}:/results -w /r0esults -u $(id -u ${USER}):$(id -g ${USER}) pharmai/plip:latest -f input.pdb -yv -o output_dir_path -x -t -y -p</code>
-            <br>
-            <h5>The Options can check in <a href="https://github.com/JeongSooNa/PLIP">Github</a></h5>
+            <br />
+            <code
+              >docker run --rm -v ${PWD}:/results -w /r0esults -u $(id -u
+              ${USER}):$(id -g ${USER}) pharmai/plip:latest -f input.pdb -yv -o
+              output_dir_path -x -t -y -p</code
+            >
+            <br />
+            <br />
+            <h5>
+              The Options can check in
+              <a href="https://github.com/JeongSooNa/PLIP">Github</a>
+            </h5>
+            <br />
             <h5>output</h5>
+            <br />
             <h5>- protonated & plipfixed pdb structure file</h5>
+            <br />
             <h5>- report text file</h5>
+            <br />
             <h5>- report xml file</h5>
-            <h5>Reference : <a href="https://github.com/pharmai/plip">PLIP Github</a></h5>
+            <br />
+            <h5>
+              Reference :
+              <a href="https://github.com/pharmai/plip">PLIP Github</a>
+            </h5>
+            <br />
           </div>
         </div>
       </section>
@@ -376,6 +495,10 @@
       <div class="row bottom">
         <div class="col bottom-1">
           <h4>E-mail : <span>jsna@syntekabio.com</span></h4>
+          <h4>
+            GitHub : <a href="https://github.com/JeongSooNa">JeongSoo Na</a>
+          </h4>
+          <h4>Tel : 010-6672-3171</h4>
         </div>
       </div>
     </div>
