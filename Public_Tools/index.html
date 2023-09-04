@@ -12,15 +12,11 @@
         <div class="container my-5">
           <div class="nav-wrapper">
             <h4>Nav</h4>
-            <div class="nav-hide">
-
-            </div>
+            <div class="nav-hide"></div>
           </div>
           <div class="card-main-heading-section">
             <img src="IMG/STB_logo.png" alt="" />
-            <h1 class="card-main-heading">
-              AI Drug Development Public Tools
-            </h1>
+            <h1 class="card-main-heading">AI Drug Development Public Tools</h1>
             <br />
             <br />
             <h3>JeongSoo Na</h3>
@@ -144,10 +140,10 @@
                 <br />
                 - templete_mode : none
               </h5>
-              <img src="IMG/AF_Input_protein_sequence.png" alt="">
+              <img src="IMG/AF_Input_protein_sequence.png" alt="" />
               <br />
               <h4>Install dependencies</h4>
-              <img src="IMG/AF_Install dependencies.png" alt="">
+              <img src="IMG/AF_Install dependencies.png" alt="" />
               <br />
               <h4>
                 MSA options (custom MSA upload, single sequence, pairing mode)
@@ -157,7 +153,7 @@
                 <br />
                 - unpaired_paired (Default)
               </h5>
-              <img src="IMG/AF_MSA_options.png" alt="">
+              <img src="IMG/AF_MSA_options.png" alt="" />
               <br />
               <h4>Advanced settings</h4>
               <h5>
@@ -165,11 +161,11 @@
                 <br />
                 - num_recycles : auto (Default)
               </h5>
-              <img src="IMG/AF_Advances_setting.png" alt="">
+              <img src="IMG/AF_Advances_setting.png" alt="" />
               <br />
               <h4>Run Prediction</h4>
               <h5>- 5 model output</h5>
-              <img src="IMG/AF_Run_Prediction.png" alt="">
+              <img src="IMG/AF_Run_Prediction.png" alt="" />
               <br />
               <h4>Display 3D structure</h4>
               <h5>
@@ -189,7 +185,7 @@
                 <br />
                 - red : Very low
               </h5>
-              <img src="IMG/AF_Display_3D_structure.png" alt="">
+              <img src="IMG/AF_Display_3D_structure.png" alt="" />
               <br />
               <h4>Plots</h4>
               <h5>
@@ -197,11 +193,11 @@
                 <br />
                 - Predicted lDDT per position
               </h5>
-              <img src="IMG/AF_Plot.png" alt="">
+              <img src="IMG/AF_Plot.png" alt="" />
               <br />
               <h4>Package and download results</h4>
               <h5>- Result : protein sequence -> predicted 5 structure</h5>
-              <img src="IMG/AF_download.png" alt="">
+              <img src="IMG/AF_download.png" alt="" />
             </div>
           </div>
           <!-- section 2 -->
@@ -491,6 +487,46 @@
               <a href="https://github.com/pharmai/plip">PLIP Github</a>
             </h5>
             <br />
+            <br />
+            <h4>Peptides Interactions Profiling using PLIP</h4>
+            <br />
+            <h5>
+              Detection of Protein-Peptide Interactions For the detection of
+              ligands, PLIP relies on the separation of `ATOM` and `HETATM`
+              entries in the PDB file.
+            </h5>
+            <br />
+            <h5>
+              The latter are searched for suitable ligands when running in
+              normal mode.
+            </h5>
+            <br />
+            <h5>
+              Peptide ligands, however, are usually deposited as `ATOM` entries
+              in a separate chain. PLIP can not detect these entities
+              automatically.
+            </h5>
+            <br />
+            <h5>
+              To switch into protein-peptide interaction mode, start PLIP with
+              the option `--peptides`, followed by the peptide chain of
+              interest,
+            </h5>
+            <br />
+            <code> bash $ plip -i 5hi4 --peptides I -vx </code>
+            <br />
+            <br />
+            <h5>
+              This option can also be used to analyze interaction between
+              different protein chains or nucleic acid strands and is therefore
+              also available using the synonym `--inter`.
+            </h5>
+            <img id="plip_pep" src="IMG/PLIP_peptides.png" alt="">
+            <br>
+            <h5>This output show interaction informations(Hydrophobic Interactions, Hydrogen Bonds, pi-Stacking, pi-Cation Interactions etc.)</h5>
+            <h5></h5>
+            <br>
+            <br>
           </div>
         </div>
       </section>
