@@ -17,13 +17,13 @@ hr {
 body {
   font-family: "Lato", sans-serif;
 }
-.container{
+.container {
   background-color: black;
   color: white;
   position: relative;
 }
 /* fixed navigator */
-.nav-wrapper{
+.nav-wrapper {
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -36,7 +36,7 @@ body {
   z-index: 3;
   cursor: pointer;
 }
-.nav-wrapper:hover{
+.nav-wrapper:hover {
   transform: scale(1.1);
   transition: 0.5s;
 }
@@ -54,11 +54,11 @@ body {
   margin-bottom: 3rem;
   margin-left: 1rem;
 }
-.hero-card-section .card-main-heading-section ol{
+.hero-card-section .card-main-heading-section ol {
   margin: 20px;
   line-height: 30px;
 }
-.hero-card-section .card-main-heading-section li{
+.hero-card-section .card-main-heading-section li {
   font-weight: 600;
 }
 .hero-card-section .card-main-heading-section h1 {
@@ -68,6 +68,23 @@ body {
 .hero-card-section .card-main-heading-section .card-main-heading {
   font-weight: 800;
   margin-bottom: 2rem;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  text-align: center;
+  overflow: hidden;
+  animation: typewriter 5s steps(55, end) infinite;
+  /*  */
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+    margin-left: 0;
+  }
+
+  to {
+    width: 405px;
+    margin-left: 0;
+  }
 }
 
 .block-badge {
@@ -130,7 +147,7 @@ section.hero-card-section .row-card > .hero-card-container > .card {
   z-index: 2;
 }
 
-.card-body a{
+.card-body a {
   z-index: 3;
   cursor: pointer;
 }
@@ -215,20 +232,20 @@ section.hero-card-section .row-card > .hero-card-container > .card:hover i {
 .section1 {
   margin: 20px;
 }
-.section1-1 ol{
+.section1-1 ol {
   margin: 20px;
 }
-.section1-1 li{
+.section1-1 li {
   line-height: 25px;
   font-weight: 600;
 }
-.section1-1 h4{
+.section1-1 h4 {
   margin: 20px auto;
 }
-.section1-1 h5{
+.section1-1 h5 {
   line-height: 30px;
 }
-.section1-1 img{
+.section1-1 img {
   width: 70%;
   margin-left: 15%;
 }
@@ -237,37 +254,41 @@ section.hero-card-section .row-card > .hero-card-container > .card:hover i {
 .section2 {
   margin: 20px;
 }
-.gnina-self-docking img{
+.gnina-self-docking img {
   width: 400px;
   margin: 20px;
-  border-radius: 10px;border: 1px solid white;
+  border-radius: 10px;
+  border: 1px solid white;
 }
-.gnina-self-docking h5{
+.gnina-self-docking h5 {
   margin: 20px;
 }
-.gnina-cross-docking img{
+.gnina-cross-docking img {
   width: 400px;
   margin: 20px;
-  border-radius: 10px;border: 1px solid white;
+  border-radius: 10px;
+  border: 1px solid white;
 }
-.gnina-cross-docking h5{
+.gnina-cross-docking h5 {
   margin: 20px;
 }
-.gnina-final-docking img{
+.gnina-final-docking img {
   width: 400px;
   margin: 20px;
-  border-radius: 10px;border: 1px solid white;
+  border-radius: 10px;
+  border: 1px solid white;
 }
-.gnina-final-docking h5{
+.gnina-final-docking h5 {
   margin: 20px;
 }
 
-.diffdock-issue img{
+.diffdock-issue img {
   width: 400px;
   margin: 20px;
-  border-radius: 10px;border: 1px solid white;
+  border-radius: 10px;
+  border: 1px solid white;
 }
-.diffdock-issue h5{
+.diffdock-issue h5 {
   margin: 20px;
 }
 
@@ -275,27 +296,25 @@ section.hero-card-section .row-card > .hero-card-container > .card:hover i {
 .section3 {
   margin: 20px;
 }
-.plip-intro img{
+.plip-intro img {
   width: 100px;
 }
-.plip-intro h5{
+.plip-intro h5 {
   margin: 20px;
 }
-.section3 a{
+.section3 a {
   text-decoration: none;
   color: skyblue;
 }
-.section3 code{
+.section3 code {
   margin-left: 20px;
   background-color: grey;
   border-radius: 3px;
   padding: 3px 10px;
 }
-#plip_pep{
+#plip_pep {
   width: 600px;
 }
-
-
 
 .bottom {
   color: white;
@@ -305,12 +324,12 @@ section.hero-card-section .row-card > .hero-card-container > .card:hover i {
   background-color: black;
 }
 
-.bottom-1{
+.bottom-1 {
   height: 100%;
   margin-left: 20px;
   justify-content: space-around;
 }
-.bottom-1 a{
+.bottom-1 a {
   text-decoration: none;
   color: skyblue;
 }
