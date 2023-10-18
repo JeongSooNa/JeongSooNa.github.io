@@ -132,9 +132,9 @@ function successFunction(data) {
   var colList = data.split("\n");
   var len = colList.length;
   var column = colList[0].split(",");
-  console.log(column);
-  console.log(len);
-  console.log(colList[3]);
+  // console.log(column);
+  // console.log(len);
+  // console.log(colList[3]);
   function loadTable() {
     // table clear
     $("#data-tbody *").remove();

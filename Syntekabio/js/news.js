@@ -93,7 +93,7 @@ function successFunction(data) {
   var column = colList[0].split(",");
 
   // console.log(column);
-  console.log(len);
+  // console.log(len);
   // console.log(colList[1]);
   // console.log(colList[2].split(",")[0])
 
