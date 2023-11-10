@@ -2,10 +2,16 @@ html,
 body {
   height: 100%;
   background: #eee;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   overflow: hidden;
+  background-color: black;
+  color: white;
 }
 
 .scroll-animations-example {
@@ -133,15 +139,37 @@ body {
     cursor: pointer;
   }
 }
+.item{
+  position: relative;
+}
+.item h1{
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  text-align: center;
+  z-index: 1;
+}
+.item:hover h1{
+  display: block;
+}
+
+.intro-hover{
+  position: absolute;
+  display: none;
+}
+
 
 .fake-ui {
+  width: 100%;
   > .logo {
     position: fixed;
     top: 2vh;
     /* left: 1vh; */
     height: 3vh;
     width: 30vh;
-    font-family: Georgia, serif;
+    /* font-family: Georgia, serif; */
+    font-family: 'Dancing Script', cursive;
     font-weight: 700;
     font-size: 30px;
     color: black;
@@ -150,7 +178,7 @@ body {
   > .nav {
     position: fixed;
     top: 2vh;
-    right: 5vh;
+    right: 2vh;
   }
 
   > .nav > .item {
@@ -158,18 +186,22 @@ body {
     height: 2vh;
     width: 5vh;
     margin: 0 3vh;
-    font-family: Georgia, serif;
+    /* font-family: Georgia, serif; */
+    font-family: 'Dancing Script', cursive;
     font-weight: 700;
     font-size: 20px;
   }
 
   > .footer {
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 3px;
     position: fixed;
     bottom: 3vh;
-    left: 60%;
+    text-align: center;
     transform: translateX(-50%);
     height: 2vh;
-    width: 70vh;
+    left: 50%;
+    width: 100vh;
   }
 }
 

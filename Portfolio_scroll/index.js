@@ -42,8 +42,9 @@ class Example {
         [].forEach.call(this.images, (image) => {
             image.classList.remove("-active");
         });
-
-        setTimeout(this.showImages.bind(this), 2000);
+        setTimeout($(".intro-hover").css('display', 'block'), 5000);
+        $(".intro-hover").css('display', 'none');
+        setTimeout(this.showImages.bind(this), 5000);
     }
 }
 
