@@ -42,11 +42,16 @@ class Example {
         [].forEach.call(this.images, (image) => {
             image.classList.remove("-active");
         });
-        setTimeout($(".intro-hover").css('display', 'block'), 5000);
-        $(".intro-hover").css('display', 'none');
+        // $(".intro-hover").css('display', 'none');
         setTimeout(this.showImages.bind(this), 5000);
     }
 }
+
+$(".intro-section").click(function(){
+    setTimeout($(".intro-hover").css('display', 'block'), 5000);
+    setTimeout(() => $(".intro-hover").css('display', 'none'), 5000);
+})
+
 
 window.addEventListener("DOMContentLoaded", (event) => {
     const example = new Example({
