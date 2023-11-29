@@ -1,197 +1,186 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* See https://brm.us/css-scroll-detection for details */
+
+@property --scroll-position {
+	syntax: "<number>";
+	inherits: true;
+	initial-value: 0;
+}
+@property --scroll-position-delayed {
+	syntax: "<number>";
+	inherits: true;
+	initial-value: 0;
+}
+
+@keyframes adjust-pos {
+	to {
+		--scroll-position: 1;
+		--scroll-position-delayed: 1;
+	}
+}
+
+:root {
+	animation: adjust-pos 0.01s linear both; /* Duration added to cater for Firefox */
+	animation-timeline: scroll(root);
 }
 
 body {
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
+	transition: --scroll-position-delayed 0.15s linear;
+	--scroll-velocity: calc(
+		var(--scroll-position) - var(--scroll-position-delayed)
+	);
 }
 
-main {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+html {
+	background: #666;
 }
 
-.item {
-  width: 200px;
-  height: 300px;
-  list-style-type: none;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  background-position: center;
-  background-size: cover;
-  border-radius: 20px;
-  box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3) inset;
-  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
-
-  &:nth-child(1),
-  &:nth-child(2) {
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    transform: none;
-    border-radius: 0;
-    box-shadow: none;
-    opacity: 1;
-  }
-
-  &:nth-child(3) {
-    left: 50%;
-  }
-  &:nth-child(4) {
-    left: calc(50% + 220px);
-  }
-  &:nth-child(5) {
-    left: calc(50% + 440px);
-  }
-  &:nth-child(6) {
-    left: calc(50% + 660px);
-    opacity: 0;
-  }
+html {
+	scroll-snap-type: y mandatory;
 }
 
-.content {
-  width: min(30vw, 400px);
-  position: absolute;
-  top: 50%;
-  left: 3rem;
-  transform: translateY(-50%);
-  font: 400 0.85rem helvetica, sans-serif;
-  color: white;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  display: none;
-
-  & .title {
-    font-family: "arial-black";
-    text-transform: uppercase;
-  }
-
-  & .description {
-    line-height: 1.7;
-    margin: 1rem 0 1.5rem;
-    font-size: 0.8rem;
-  }
-
-  & button {
-    width: fit-content;
-    background-color: rgba(0, 0, 0, 0.1);
-    color: white;
-    border: 2px solid white;
-    border-radius: 0.25rem;
-    padding: 0.75rem;
-    cursor: pointer;
-  }
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-.item:nth-of-type(2) .content {
-  display: block;
-  animation: show 0.75s ease-in-out 0.3s forwards;
+ul {
+	list-style: none;
+	pointer-events: none;
+	line-height: 1;
+	display: block;
 }
 
-@keyframes show {
-  0% {
-    filter: blur(5px);
-    transform: translateY(calc(-50% + 75px));
-  }
-  100% {
-    opacity: 1;
-    filter: blur(0);
-  }
+ul li {
+	display: block;
+	line-height: 1;
 }
 
-.nav {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  user-select: none;
-
-  & .btn {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: rgba(0, 0, 0, 0.7);
-    border: 2px solid rgba(0, 0, 0, 0.6);
-    margin: 0 0.25rem;
-    padding: 0.75rem;
-    border-radius: 50%;
-    cursor: pointer;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.3);
-    }
-  }
+.panel {
+	scroll-snap-align: center;
+	height: 100dvh;
+	border: 2px solid #333;
+	background: rgb(0 0 0 / 0.15);
+	z-index: -1;
 }
 
-@media (width > 650px) and (width < 900px) {
-  .content {
-    & .title {
-      font-size: 1rem;
-    }
-    & .description {
-      font-size: 0.7rem;
-    }
-    & button {
-      font-size: 0.7rem;
-    }
-  }
-  .item {
-    width: 160px;
-    height: 270px;
-
-    &:nth-child(3) {
-      left: 50%;
-    }
-    &:nth-child(4) {
-      left: calc(50% + 170px);
-    }
-    &:nth-child(5) {
-      left: calc(50% + 340px);
-    }
-    &:nth-child(6) {
-      left: calc(50% + 510px);
-      opacity: 0;
-    }
-  }
+.panel img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(30%);
 }
 
-@media (width < 650px) {
-  .content {
-    & .title {
-      font-size: 0.9rem;
-    }
-    & .description {
-      font-size: 0.65rem;
-    }
-    & button {
-      font-size: 0.7rem;
-    }
-  }
-  .item {
-    width: 130px;
-    height: 220px;
+@keyframes slide-up {
+	to {
+		translate: 0 var(--end-pos);
+	}
+}
 
-    &:nth-child(3) {
-      left: 50%;
-    }
-    &:nth-child(4) {
-      left: calc(50% + 140px);
-    }
-    &:nth-child(5) {
-      left: calc(50% + 280px);
-    }
-    &:nth-child(6) {
-      left: calc(50% + 420px);
-      opacity: 0;
-    }
-  }
+.titles {
+	position: fixed;
+	z-index: 2;
+	top: 50dvh;
+	font-size: 25dvh;
+	left: 0;
+	right: 0;
+	text-align: center;
+
+	animation: slide-up 0.01s linear; /* Duration added to cater for Firefox */
+	animation-timeline: scroll(root block);
+
+	font-family: impact;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+	/* Calculate the part each child can occupy.
+	    For 8 children, that’s 12.5%
+	*/
+	--num-children: 8;
+	--num-children-1: calc(var(--num-children) - 1);
+	--size-per-child: calc(100% / var(--num-children));
+
+	/* Because the text needs to be in the dead center,
+	   we need to shift up the whole thing by half the size per child.
+	   If not, it would start with the top edge of the whole box
+	   aligned to the center. We want the text to be centered.
+	   So in the case of 8 items that is from -6.25% to to -(100% - 6.25%).
+	   This range still spans 100% in total, but it is slightly shifted up.
+	*/
+	--half-size-per-child: calc(var(--size-per-child) / 2);
+	--start-pos: calc(var(--half-size-per-child) * -1);
+	--end-pos: calc(-100% + var(--half-size-per-child));
+	translate: 0 var(--start-pos);
+}
+
+.titles.transparent {
+	color: transparent;
+	-webkit-text-stroke: 1px rgb(255 255 255 / 0.7);
+	text-stroke: 1px rgb(255 255 255 / 0.7);
+}
+
+.titles.fill {
+	color: hotpink;
+
+	/* Determine which element is currently in view. We do this based
+	   on the current scroll-distance (exposed via --y-pos) and how
+	   much space each child takes up.
+	*/
+	--y-per-child: calc(1 / var(--num-children));
+	--cur-child: calc((var(--scroll-position) / var(--y-per-child)) + 1);
+	--cur-child-1: calc(var(--cur-child) - 1);
+
+	/* To adjust the clip path we need to adjust the total range
+	   that is spanned. 
+	*/
+	--clip-min: 0;
+	--clip-max: calc(100% - var(--size-per-child));
+	--clip-per-child: calc(var(--clip-max) / var(--num-children));
+	--fix: calc(
+		var(--clip-per-child) / 8
+	); /* Not sure why I need a fix like this ¯\_(ツ)_/¯ */
+	--extra: 1%;
+	clip-path: inset(
+		calc((var(--cur-child-1) * var(--clip-per-child)) - var(--extra)) 0%
+			calc(
+				(100% - (var(--cur-child) * var(--clip-per-child)) - var(--fix)) -
+					var(--extra)
+			)
+			0%
+	);
+}
+
+/* And now, for the late scrolling part …*/
+.titles li {
+	will-change: transform;
+	transform-origin: 50% 50%;
+	transform: skewY(calc(var(--scroll-velocity) * -75deg));
+}
+
+
+/* Show warning for browsers without support */
+.warning {
+	border: 1px solid black;
+	z-index: 9999;
+	color: black;
+	background: rgba(255 255 225 / 0.9);
+	z-index: 1;
+
+	position: fixed;
+	top: 1em;
+	left: 1em;
+	right: 1em;
+	text-align: center;
+}
+
+.warning p {
+	margin: 1em 0;
+}
+
+/* Hide warning when native view-timeline support detected */
+@supports (view-timeline: --works) {
+	.warning {
+		display: none;
+	}
 }
