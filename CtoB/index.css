@@ -1,3 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.row {
+  display: flex;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Manrope:700|Manrope:400");
 
 :root {
@@ -41,6 +54,15 @@ nav {
   z-index: 9999;
 }
 
+/* DropDown */
+.dropbtn {
+  background-color: #ea2129;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -49,30 +71,34 @@ nav {
 .dropdown-content {
   display: none;
   position: absolute;
-  /* background-color: #00000000; */
-  background-color: wheat;
+  background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
   text-decoration: none;
-  color: white;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
 .menu {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   position: relative;
-}
-
-.menu a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  position: absolute;
 }
 
 .menu:hover {
@@ -87,7 +113,7 @@ nav {
 .grid {
   position: absolute;
   height: 100%;
-  weight: 100%;
+  /* weight: 100%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -258,7 +284,7 @@ span {
 @media screen and (max-width: 1000px) {
   .title {
     font-size: 4rem;
-    line-height: ;
+    line-height: 0;
   }
 
   .title > p {
