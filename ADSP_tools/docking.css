@@ -39,7 +39,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 200vh;
   overflow: hidden;
 }
 
@@ -53,6 +54,11 @@ nav {
   box-sizing: border-box;
   /* z-index: 9999; */
 }
+/* nav:hover{
+    margin-top: -12.7vh;
+    margin-bottom: -12.7vh;
+    height: 30vh; */
+/* } */
 
 /* trigger */
 .trigger {
@@ -62,6 +68,10 @@ nav {
 
 .trigger:hover {
   color: var(--text);
+  cursor: pointer;
+}
+.trigger:hover .sub {
+  height: 20vh;
   cursor: pointer;
 }
 
@@ -85,7 +95,7 @@ nav {
   overflow: hidden;
   opacity: 0;
   /* make submenu not hoverable when opacity transition finished,
-   * do this instantaneously */
+     * do this instantaneously */
   transition: max-height 0s 1.5s,
     /* hide the submenu after 1 second, in 400ms */ opacity 0.4s 1s;
 
@@ -101,6 +111,8 @@ nav {
 /* show submenu when trigger or menu itself is hovered */
 .sub:hover,
 .trigger:hover .sub {
+  /* overflow: auto;
+    cursor: pointer; */
   max-height: 500px;
   opacity: 1;
   transition-delay: 0s;
@@ -154,76 +166,41 @@ nav {
 }
 
 .title {
-  font-size: 8rem;
+  width: 70%;
+  overflow: scroll;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: -0.2rem;
+  letter-spacing: -0.1rem;
   display: flex;
   flex-direction: column;
   position: absolute;
   justify-content: center;
   align-self: center;
-  height: 100%;
+  height: 80%;
   /* z-index: 1000; */
 }
-
-.title > p {
+.title::-webkit-scrollbar {
+  width: 10px;
+}
+.title::-webkit-scrollbar-thumb {
+  background-color: #2f3542;
+}
+.title::-webkit-scrollbar-track {
+    display: none;
+  background-color: grey;
+}
+출처: https://codingbroker.tistory.com/66 [완벽은 없다:티스토리]
+  
+  .title > p {
   margin: 0;
   line-height: 10rem;
   width: auto;
-}
-
-.title > p:nth-child(1) {
   align-self: flex-start;
-}
-
-.title > p:nth-child(2) {
-  color: var(--primary);
-  align-self: flex-end;
-}
-
-.title > p:nth-child(3) {
-  align-self: flex-end;
 }
 
 .material-icons {
   display: none;
   fill: var(--text);
-}
-
-.button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  height: 50px;
-  width: 160px;
-  /* z-index: 9999; */
-}
-
-button {
-  height: 50px;
-  width: 160px;
-  clip-path: path(
-    "M 0 25 C 0 -5, -5 0, 80 0 S 160 -5, 160 25, 165 50 80 50, 0 55, 0 25"
-  );
-  border: none;
-  border-radius: 13px;
-  background-color: var(--primaryBg);
-  box-shadow: 0px -3px 15px 0px var(--primaryHi) inset;
-  color: var(--primaryFg);
-  font-family: "Manrope";
-  font-size: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  transform: translateY(0px);
-  transition: all 0.2s ease;
 }
 
 span {
@@ -246,7 +223,7 @@ span {
 }
 
 .button.first {
-  top: 12%;
+  top: 20%;
   right: 20%;
 }
 
