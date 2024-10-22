@@ -383,6 +383,7 @@ p a:hover {
     font-family: "Do Hyeon", sans-serif;
     font-weight: 400;
     font-style: normal;
+    line-height: 50px;
 }
 @media (min-width: 30rem) {
     .lead {
@@ -396,6 +397,28 @@ p a:hover {
 .portfolio.block {
     display: inline-block;
     width: 100%;
+}
+.block img{
+    margin: 40px 0;
+    width: 80%;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+.badge img{
+    width: 30px;
+}
+.badge_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.badge_item{
+    /* text-transform: none; */
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    text-align: center;
 }
 @media (min-width: 30rem) {
     .portfolio.block {
