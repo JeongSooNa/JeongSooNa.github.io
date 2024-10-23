@@ -406,6 +406,7 @@ p a:hover {
 }
 .badge img{
     width: 30px;
+    height: 30px;
 }
 .badge_list{
     display: flex;
