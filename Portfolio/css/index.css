@@ -291,6 +291,15 @@ a {
 .section.section--contact svg {
     fill: white;
 }
+/* 3rd project */
+.section.section--portfolio3 {
+    background-color: #3fd83a;
+    color: white;
+}
+.section.section--portfolio3 svg {
+    top: -50px;
+    fill: #3a99d8;
+}
 /** * Typo */
 h1, .h1, h2, .h2, h3, .h3, h4, .h5 {
     font-family: "nimbus-sans", sans-serif;
