@@ -1,13 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
-        Hi
-    </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- title -->
+    <title>JS Portfolio</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <script src="https://use.typekit.net/ehh4lya.js"></script>
+    <script>
+      try {
+        Typekit.load({ async: true });
+      } catch (e) {}
+    </script>
+
+    <nav class="side">
+      <div class="side__inner">
+        <div class="top"><a href="#">JeongSoo Na</a></div>
+        <div class="bottom">
+          <a href="https://github.com/JeongSooNa">gitHub</a>
+          <a href="https://twitter.com/hellovolker"></a>
+          <a href="mailto:hello@volkerotto.net"></a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section section--hello" id="hello">
+      <div class="section__inner">
+        <div class="block">
+          <a class="pre" href="#intro"
+            ><span>#</span>python<span> #</span>r<span> #</span>java<span>
+              #</span
+            >linux</a
+          >
+          <h2>Hello This is JS</h2>
+          <ul class="anchornav">
+            <li>
+              <a href="#intro"
+                >Intro <span>#1 안녕하세요 나정수입니다.</span></a
+              >
+            </li>
+            <li>
+              <a href="#about"
+                >About
+                <span>#2 함께 성장하고, 더 나은 결과를 위해 달립니다.</span></a
+              >
+            </li>
+            <li>
+              <a href="#clients">History <span>#3 연혁</span></a>
+            </li>
+            <li>
+              <a href="#portfolio">Project <span>#4 프로젝트</span></a>
+            </li>
+            <li>
+              <a href="#contact">Contact <span>#5 연락처</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--intro" id="intro">
+      <div class="section__inner">
+        <div class="block">
+          <a class="pre" href="#intro"
+            ><span>#1</span>안녕하세요 나정수입니다.</a
+          >
+          <h1>
+            JeongSoo Na is a<br />
+            Developer & Researcher<br />
+            based in python & linux<br />
+            Korea.
+          </h1>
+          <p class="lead">
+            함께 성장하는 연구개발자 나정수입니다.<br>
+            다양한 프로그래밍 언어를 접하면서 많은 경험을 했고,<br>
+            프로그래밍 언어를 이해하고, 실무, R&D에 적용할 수 있는 능력을 갖고 있습니다.<br>
+            또한 데이터 핸들링, 분석, 다양한 시각화 경험도 있습니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--about" id="about">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 10"
+        preserveAspectRatio="none"
+      >
+        <polygon points="100 0 100 10 0 10" />
+      </svg>
+
+      <div class="section__inner">
+        <div class="block">
+          <a class="pre" href="#about"
+            ><span>#2</span>함께 성장하고, 더 나은 결과를 위해 달립니다.</a
+          >
+          <h2>
+            JS works for companies and agencies.<br />progressively.<br />professionally.
+          </h2>
+          <p class="lead">
+            정보통계학 전공으로 기초지식과 프로그래밍 언어에 대한 다양한 경험,
+            이해를 갖고 있습니다.<br />
+            통계교육원 보조강사, 풀스텍 웹 개발 교육과정 이수, 기업부설 AI
+            신약개발 연구소 연구원 등 경험을 하며<br />
+            자기 개발을 통해 부족한 부분을 하나씩 차근차근 채워왔습니다.<br />
+            이제는 더 나아가 때로는 조직의 한 조각으로, 때로는 전문가로 역량을 키우고자 합니다.<br />
+            성공적인 결과로 증명하고, 때로는 실패를 교훈 삼아 더 나은 결과로 보답해 조직과 내·외부 고객을 만족시키는 사람이 될 것을 약속드립니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--clients" id="clients">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 10"
+        preserveAspectRatio="none"
+      >
+        <polygon points="100 10 0 0 0 10" />
+      </svg>
+
+      <div class="section__inner">
+        <div class="block">
+          <a class="pre" href="#clients"><span>#3</span>연혁</a>
+          <h2>
+            History
+          </h2>
+          <p class="lead">
+            <ul class="history_list">
+              활동 내역
+                <li>2013.03 ~ 2019.02 :: 충북대학교 정보통계학과 졸업</li>
+                <li>2019.05 ~ 2022.06 ::  통계교육원 SAS 초·중·고급 교육과정 보조강사</li>
+                <li>2021.12 ~ 2022.07 :: DW아카데미 반응형 웹·앱 개발 풀스택 과정 수료</li>
+                <li>2022.08 ~ 재직 중 :: (주)신테카바이오 기업부설 연구소 주임연구원</li>
+            </ul>
+            <br>
+            <br>
+            <ul class="history_list">
+              자격 시험
+              <li>2018.11 :: 사회조사분석사 2급</li>
+              <li>2018.11 :: 한국사능력검정시험 3급</li>
+              <li>2022.06 :: SQL개발자 (SQLD)</li>
+              <li>2023.06 :: 데이터분석준전문가 (ADsP)</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--portfolio1" id="portfolio">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+      >
+        <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+      </svg>
+
+      <div class="section__inner">
+        <div class="block">
+          <a class="pre" href="#portfolio"><span>#4</span>Project</a>
+          <h2>Project #1</h2>
+          <p class="lead">
+            연구 데이터 및 약물 개발에 필요한 단백질, 화합물 라이브러리를 활용해 싱글 페이지를 제작했습니다.<br>
+            사내 데이터베이스 관리, 주요 개발 타겟을 대상으로 정보 확인 및 접근의 용이를 목적으로 제작하였으며<br>
+            내부고객을 대상으로 실무에 적용했고, 외부업체, 박람회 미팅 자료로도 활용한 프로젝트 결과물입니다.<br>
+            <br>
+            가벼운 토이 프로젝트였으나, 해당 프로젝트에서 데이터 수집, 싱글 페이지 디자인, 제작 등<br>
+            전반적인 모든 과정에 기여했습니다.
+          </p>
+          <center>
+            <img src="img/1700T_index.png" alt="">
+          </center>
+          <p class="lead">
+            해당 페이지는 메인 페이지로, 간략한 설명과 함께 링크를 첨부한 싱글 페이지입니다.<br>
+            데이터 테이블 페이지, 분석 및 시각화 페이지, 회사 홈페이지, 회사 클라우드 페이지, 회사 소개 브로셔 등
+          </p>
+          <center>
+            <img src="img/1700T_board.png" alt="">
+          </center>
+          <p class="lead">
+            해당 페이지는 데이터를 활용한 검색, 필터링 등의 기능을 구현한 보드 페이지입니다.<br>
+            그 외 상세 페이지로 해당 타겟 정보 페이지, 관련 사이트 등을 첨부해 놓았습니다.
+          </p>
+          <center>
+            <img src="img/1700T_rcsb.png" alt="">
+          </center>
+          <p class="lead">
+            해당 페이지는 시간에 따른 데이터 변화량, 추세 등을 한눈에 파악하기 위해 제작했으며,<br>
+            그래프의 경우 Javascript Chart.js를 활용했습니다.
+          </p>
+          <br>
+          <br>
+          <div class="badge">
+            <p class="lead">tech stack</p>
+            <div class="badge_list">
+              <div class="badge_item">
+                <img src="https://simpleicons.org/icons/html5.svg" alt="">
+                <p>HTML5</p>
+              </div>
+              <div class="badge_item">
+                <img src="https://simpleicons.org/icons/css3.svg" alt="">
+                <p>CSS3</p>
+              </div>
+              <div class="badge_item">
+                <img src="https://simpleicons.org/icons/javascript.svg" alt="">
+                <p>Javascript</p>
+              </div>
+              <div class="badge_item">
+                <img src="https://simpleicons.org/icons/chartdotjs.svg" alt="">
+                <p>Chart.js</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--portfolio" id="portfolio2">
+      <div class="section__inner">
+        <div class="block">
+          <h2>Project #2</h2>
+          <p class="lead">
+            <i>in-silico</i> 신약개발이란 세포 내(<i>in-vivo</i>), 시험관 내(<i>in-vitro</i>)에서 연구하는 것이 아닌<br>
+            컴퓨터를 사용한 신약개발 연구로, 단백질 구조학을 기반으로 한 단백질, 화합물 3D 구조에 대해 파악하고, 결합구조를 예측하는 업무를 수행했습니다.<br>
+            RCSB PDB (Protein Data Bank) 구조를 주로 사용했으며, 자체 화합물 라이브러리를 사용해 물질을 개발하는 과정으로 Public Tool과 함께 사내 자체 개발 프로그램을 활용해 단계적으로 진행했습니다.<br><br>
+          </p>
+          <p class="lead">
+            연구소 내 운영 파트를 담당하면서 제가 맡은 업무는 다음과 같습니다.<br>
+            &nbsp;&nbsp;1. 운영 환경 세팅 및 프로그램 설치<br>
+            &nbsp;&nbsp;2. 운영에 필요한 run, 자동화 스크립트 작성 (python, bash script 활용)<br>
+            &nbsp;&nbsp;3. 자체 프로그램 운영(Operating)<br>
+            &nbsp;&nbsp;4. 결과 검증 작업 (Public Tool 사용)<br>
+            &nbsp;&nbsp;5. 데이터 핸들링 및 최종 리포트 작성
+          </p>
+          <center>
+            <img src="img/EGFR.png" alt="">
+          </center>
+          <p class="lead">
+            먼저, 타겟이 되는 단백질 구조를 확보한 후 Binding Pocket을 지정 해 해당 위치에 결합할 수 있는 화합물들을 대상으로 Screening을 진행합니다.<br>
+            여기서 사용되는 Public Tool로는 Gnina, AutoDock 등의 Molecular Docking 프로그램이 있습니다.<br>
+            이런 다양한 프로그램을 사용하면서 사용 환경 설정에 대한 지식, Github를 활용한 프로그램 세팅, Docker 환경에서의 작업 및 이미지, 컨테이너 구성 등의 스킬을 익힐 수 있었습니다.<br>
+            <br>
+            이 외에도 다양한 Public Tool들을 세팅, 운영, 실무에 적용한 내용이 Github에 저장되어있습니다.
+          </p>
+          <center>
+            <img src="img/computing_center.png" alt="">
+          </center>
+          <p class="lead">
+            사내 4000여대의 CPU, GPU 서버 보유 환경에서 병렬처리 방법으로 작업 수행 경험을 할 수 있었습니다.<br>
+            여기서 기초적인 Linux 환경에서의 작업, 환경 설정, bash script 등을 배울 수 있었고,<br>
+            하드웨어 유지보수, 신규 서버 설치 작업 등에도 지원을 통해 참여할 수 있었습니다.<br><br><br>
+          </p>
+          <div class="badge">
+            <p class="lead">tech stack</p>
+            <div class="badge_list">
+              <div class="badge_item">
+                <img src="https://simpleicons.org/icons/linux.svg" alt="">
+                <p>Linux</p>
+              </div>
+              <div class="badge_item">
+                <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png" alt="">
+                <p>Python</p>
+              </div>
+              <div class="badge_item">
+                <img src="https://simpleicons.org/icons/docker.svg" alt="">
+                <p>Docker</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        width="100%"
+        height="100"
+        viewBox="0 0 100 102"
+        preserveAspectRatio="none"
+        class="bottom"
+      >
+        <path d="M0 0 L50 100 L100 0 Z"></path>
+      </svg>
+    </section>
+    <!-- 3rd project -->
+    <section class="section section--portfolio3" id="portfolio3">
+      <div class="section__inner">
+        <div class="block">
+          <h2>Project #3</h2>
+          <p class="lead">
+            대덕특구 50주년 기념 기술사업화 박람회 :: 2023.10
+            <br><br>
+          </p>
+          <p class="lead">
+            준비 내용<br>
+            &nbsp;&nbsp;1. 전반적인 사전 준비 및 부스 관리<br>
+            &nbsp;&nbsp;2. 외부 업체 미팅을 위한 자료 및 데이터 테이블 제작<br>
+            &nbsp;&nbsp;3. 기술 홍보 및 발표<br>
+            &nbsp;&nbsp;4. 사후관리<br>
+          </p>
+          <center>
+            <img src="img/대덕특구20주년박람회.jpg" alt="">
+          </center>
+          <p class="lead">
+            <br>
+            그 외에도 다양한 행사, 세미나, 학술회 경험이 있습니다.
+            <br>
+            다양한 기술과 경험을 바탕으로 보다 나은 서비스를 제공하며, 개인, 조직의 성장과 함께 주어진 업무를 처리하는 연구개발자 나정수입니다.
+          </p>
+        </div>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        width="100%"
+        height="100"
+        viewBox="0 0 100 102"
+        preserveAspectRatio="none"
+        class="bottom"
+      >
+        <!-- <path d="M0 0 L50 100 L100 0 Z"></path> -->
+      </svg>
+    </section>
+
+    <section class="section section--contact" id="contact">
+      <div class="section__inner">
+        <div class="block">
+          <a class="pre" href="#contact"><span>#5</span>연락처</a>
+          <h2>
+            For work inquiries<br />please email:<br />
+            <span
+              ><a href="mailto:skwjdtn3171@naver.com"
+                >skwjdtn3171@naver.com</a
+              ></span
+            ><br />Mobile: 010 6672 3171
+          </h2>
+          <p class="lead">
+            More links: <a href="https://github.com/JeongSooNa">Github</a> and
+            <a href="https://www.linkedin.com/in/na-jeong-soo-005029176/"
+              >Linkedin</a
+            >.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
